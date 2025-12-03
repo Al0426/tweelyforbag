@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweelyforbag Nova - Tas Selempang Wanita Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* Hero Section - Center Aligned */
+        .hero {
+            padding: 40px 0 30px;
+            background: linear-gradient(135deg, #fdf6f0 0%, #fff 100%);
+            width: 100%;
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-text {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .hero-text h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #222;
+            line-height: 1.2;
+        }
+        
+        .product-brand {
+            color: #ff5722;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 18px;
+        }
+        
+        .rating-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .stars {
+            color: #FFD700;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .rating-value {
+            font-weight: 600;
+            margin-right: 5px;
+            font-size: 16px;
+        }
+        
+        .review-count {
+            color: #666;
+            font-size: 15px;
+        }
+        
+        .hero-text p {
+            font-size: 17px;
+            color: #666;
+            margin-bottom: 25px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-height: 450px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+        
+        /* Price Section - Centered */
+        .price-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .price {
+            font-size: 36px;
+            color: #ff5722;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+        
+        .original-price {
+            font-size: 20px;
+            color: #999;
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+        
+        .discount-badge {
+            background-color: #ff5722;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        /* Product Gallery Slideshow */
+        .product-gallery {
+            padding: 50px 0;
+            background-color: #fff;
+            width: 100%;
+        }
+        
+        .section-title {
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #222;
+            padding-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #ff5722;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 400px;
+        }
+        
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        /* Slideshow controls */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            border: none;
+            padding: 12px 16px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+            z-index: 10;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        
+        .prev {
+            left: 15px;
+        }
+        
+        .next {
+            right: 15px;
+        }
+        
+        /* Slideshow dots */
+        .dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .dot.active, .dot:hover {
+            background-color: #ff5722;
+        }
+        
+        /* Color Selection - Centered */
+        .color-selection {
+            padding: 40px 0;
+            background-color: #f9f9f9;
+            width: 100%;
+        }
+        
+        .color-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 25px;
+            max-width: 600px;
+        }
+        
+        .color-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .color-option:hover {
+            transform: scale(1.08);
+        }
+        
+        .color-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-bottom: 12px;
+            border: 4px solid transparent;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .color-circle.selected {
+            border-color: #ff5722;
+            transform: scale(1.1);
+        }
+        
+        .color-name {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        /* Color definitions */
+        .color-black {
+            background-color: #1a1a1a;
+        }
+        
+        .color-nude {
+            background-color: #F3D7CA;
+        }
+        
+        .color-mocca {
+            background-color: #8B4513;
+        }
+        
+        .color-smoke {
+            background-color: #848884;
+        }
+        
+        /* Features - Centered */
+        .features {
+            padding: 50px 0;
+            background-color: #fff;
+            width: 100%;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            background-color: #f9f9f9;
+            padding: 30px 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: #ff5722;
+            margin-bottom: 20px;
+        }
+        
+        .feature-item h3 {
+            margin-bottom: 15px;
+            color: #222;
+            font-size: 20px;
+        }
+        
+        .feature-item p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        /* Reviews - Centered */
+        .reviews {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+            width: 100%;
+        }
+        
+        .review-summary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .average-rating {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .average-rating-value {
+            font-size: 42px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 5px;
+        }
+        
+        .review-count-large {
+            color: #666;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .review-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .review {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 700px;
+            text-align: left;
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .reviewer-name {
+            font-weight: 600;
+            font-size: 17px;
+        }
+        
+        .review-rating {
+            color: #FFD700;
+            font-size: 16px;
+        }
+        
+        .review-text {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        /* OrderOnline Embed Section */
+        .orderonline-section {
+            padding: 50px 0;
+            background-color: #fff;
+            width: 100%;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .orderonline-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .orderonline-title {
+            font-size: 28px;
+            color: #222;
+            margin-bottom: 15px;
+        }
+        
+        .orderonline-description {
+            font-size: 17px;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* OrderOnline Embed Styling */
+        .ooef {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* CTA Section - Centered */
+        .cta-section {
+            padding: 50px 0;
+            background: linear-gradient(135deg, #ff5722 0%, #ff8a65 100%);
+            color: white;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero {
+                padding: 30px 0;
+            }
+            
+            .hero-text h1 {
+                font-size: 26px;
+            }
+            
+            .hero-image img {
+                max-height: 350px;
+            }
+            
+            .price {
+                font-size: 30px;
+            }
+            
+            .slideshow-container {
+                max-width: 90%;
+            }
+            
+            .slides {
+                height: 300px;
+            }
+            
+            .prev, .next {
+                padding: 10px 14px;
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .color-circle {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+            
+            .orderonline-container {
+                padding: 20px;
+            }
+            
+            .orderonline-title {
+                font-size: 24px;
+            }
+            
+            .cta-section h2 {
+                font-size: 26px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 22px;
+            }
+            
+            .price {
+                font-size: 26px;
+            }
+            
+            .slides {
+                height: 250px;
+            }
+            
+            .color-options {
+                gap: 15px;
+            }
+            
+            .color-circle {
+                width: 55px;
+                height: 55px;
+            }
+            
+            .feature-item {
+                padding: 25px 20px;
+            }
+            
+            .orderonline-title {
+                font-size: 22px;
+            }
+            
+            .cta-section h2 {
+                font-size: 22px;
+            }
+            
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* Center alignment utility */
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="product-brand">Tweelyforbag Nova</span>
+                    <h1>Tas Selempang Wanita Premium</h1>
+                    
+                    <div class="rating-section">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div>
+                            <span class="rating-value">4.7</span>
+                            <span class="review-count">(8 ulasan)</span>
+                        </div>
+                    </div>
+                    
+                    <p>Tas selempang wanita dengan desain elegan dan fungsi maksimal. Cocok untuk kegiatan sehari-hari, traveling, atau acara formal. Dibuat dengan material berkualitas tinggi yang tahan lama.</p>
+                    
+                    <div class="hero-image">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7qul4-lfkj2qqxahxpe2.webp" alt="Tweelyforbag Nova Tas Selempang Wanita">
+                    </div>
+                    
+                    <div class="price-section">
+                        <div class="discount-badge">Diskon 16%</div>
+                        <div class="price">
+                            <span class="original-price">Rp 250.000</span> Rp 210.000
+                        </div>
+                        <p>Hemat Rp 40.000 dengan pembelian hari ini</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Selection -->
+    <section class="color-selection fade-in">
+        <div class="container">
+            <h2 class="section-title">Pilihan Warna</h2>
+            <p class="center-text" style="max-width: 600px; margin: 0 auto 20px;">Pilih warna favorit Anda. Tersedia dalam 4 pilihan warna elegan.</p>
+            <div class="color-options">
+                <div class="color-option" data-color="black">
+                    <div class="color-circle color-black selected"></div>
+                    <span class="color-name">Hitam</span>
+                </div>
+                <div class="color-option" data-color="nude">
+                    <div class="color-circle color-nude"></div>
+                    <span class="color-name">Nude</span>
+                </div>
+                <div class="color-option" data-color="mocca">
+                    <div class="color-circle color-mocca"></div>
+                    <span class="color-name">Mocca</span>
+                </div>
+                <div class="color-option" data-color="smoke">
+                    <div class="color-circle color-smoke"></div>
+                    <span class="color-name">Smoke</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery Slideshow -->
+    <section class="product-gallery fade-in">
+        <div class="container">
+            <h2 class="section-title">Gallery Produk</h2>
+            <p class="center-text" style="max-width: 700px; margin: 0 auto 30px;">Lihat detail tas dari berbagai sudut. Geser untuk melihat gambar lainnya.</p>
+            
+            <div class="slideshow-container">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasj-m1gx7zhdfgsva1.webp" alt="Tas Selempang Wanita - Tampilan Depan">
+                        <div class="slide-caption">Tampilan Depan - Desain Elegan</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7qul3-lfkj2qqx93gma6.webp" alt="Tas Selempang Wanita - Tampilan Belakang">
+                        <div class="slide-caption">Tampilan Belakang - Kompartemen Tambahan</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-lzeh87n2g9nsfd.webp" alt="Tas Selempang Wanita - Kompartemen Dalam">
+                        <div class="slide-caption">Kompartemen Dalam - Organisasi Optimal</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7qukx-lfkj2qqx93d965.webp" alt="Tas Selempang Wanita - Digunakan0">
+                        <div class="slide-caption">Tas Dipakai - Nyaman dan Stylish</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rase-m1gx7zhde27q6a.webp" alt="Tas Selempang Wanita - Digunakan1">
+                        <div class="slide-caption">Tas Dipakai - Nyaman dan Stylish</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasf-m1gx7zhde28ff5.webp" alt="Tas Selempang Wanita - Digunakan2">
+                        <div class="slide-caption">Tas Dipakai - Nyaman dan Stylish</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lzeh4uzmp3k5e0.webp" alt="Tas Selempang Wanita - Digunakan3">
+                        <div class="slide-caption">Tas Dipakai - Nyaman dan Stylish</div>
+                    </div>
+                </div>
+                
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                
+                <!-- Dots akan dibuat otomatis oleh JavaScript -->
+                <div class="dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features fade-in">
+        <div class="container">
+            <h2 class="section-title">Fitur Unggulan</h2>
+            <p class="center-text" style="max-width: 700px; margin: 0 auto 40px;">Tas selempang premium dengan berbagai fitur yang membuat aktivitas Anda lebih praktis dan stylish.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Material Premium</h3>
+                    <p>Dibuat dari bahan berkualitas tinggi yang tahan lama dan mudah dibersihkan.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Banyak Kompartemen</h3>
+                    <p>Memiliki beberapa kantong untuk menyimpan barang dengan rapi dan terorganisir.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3>Ringan dan Nyaman</h3>
+                    <p>Desain ergonomis dengan tali yang dapat disesuaikan untuk kenyamanan maksimal.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Keamanan Tinggi</h3>
+                    <p>Dilengkapi dengan resleting berkualitas untuk keamanan barang bawaan Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews fade-in">
+        <div class="container">
+            <h2 class="section-title">Ulasan Pelanggan</h2>
+            <p class="center-text" style="max-width: 700px; margin: 0 auto 30px;">Dengarkan apa kata pelanggan kami yang telah menggunakan tas Tweelyforbag Nova.</p>
+            
+            <div class="review-summary">
+                <div class="average-rating">
+                    <div class="average-rating-value">4.7/5</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="review-count-large">Berdasarkan 8 ulasan</div>
+                </div>
+            </div>
+            
+            <div class="review-container">
+                <div class="review">
+                    <div class="review-header">
+                        <div class="reviewer-name">Sari Dewi - Jakarta</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        "Tasnya sangat bagus dan kualitasnya premium. Banyak kompartemen jadi barang-barang saya lebih tertata rapi. Warna hitamnya elegan banget! Cocok untuk ke kantor maupun jalan-jalan."
+                    </div>
+                </div>
+                
+                <div class="review">
+                    <div class="review-header">
+                        <div class="reviewer-name">Anita Melati - Bandung</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        "Desainnya elegan dan cocok untuk kerja maupun jalan-jalan. Tali tasnya nyaman tidak membuat bahu sakit. Warna nude-nya soft dan cocok dengan banyak outfit. Pengiriman juga cepat."
+                    </div>
+                </div>
+                
+                <div class="review">
+                    <div class="review-header">
+                        <div class="reviewer-name">Rina Marlina - Surabaya</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        "Warnanya persis seperti di foto. Materialnya juga kuat dan tahan air. Sangat puas dengan pembelian ini! Pilihan warna mocca-nya klasik dan timeless. Sudah dipakai 2 bulan masih seperti baru."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OrderOnline Embed Section -->
+    <section class="orderonline-section fade-in">
+        <div class="container">
+            <h2 class="section-title">Form Pemesanan</h2>
+            <p class="center-text" style="max-width: 700px; margin: 0 auto 30px;">
+                Isi form pemesanan di bawah ini untuk memesan Tas Tweelyforbag Nova. Pesanan Anda akan kami proses dalam 1x24 jam.
+            </p>
+            
+            <div class="orderonline-container">
+                <h3 class="orderonline-title">Form Pemesanan Online</h3>
+                <p class="orderonline-description">
+                    Lengkapi data diri Anda di bawah ini. Kami akan menghubungi Anda untuk konfirmasi pemesanan.
+                </p>
+                
+                <!-- OrderOnline Embed Code - v8.0.4 -->
+                <div class="ooef">
+                    <form class="orderonline-embed-form" data-username="emma" data-product-slug="jhg78hut6gdrg" data-product-id="69307b37013ec90fa90367a3" id="oo-embed-form-jhg78hut6gdrg-3305" data-origin="orderonline">
+                        <div class="ooef-loader">
+                            <style>
+                                .ooef-loader{
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    animation: ooLoadingIn 10s ease;
+                                    -webkit-animation: ooLoadingIn 10s ease;
+                                    animation-fill-mode: forwards;
+                                    overflow: hidden
+                                }
+                                @keyframes ooLoadingIn{
+                                    0%{visibility: hidden; opacity: 0}
+                                    20%{visibility: visible; opacity: 0}
+                                    100%{visibility: visible; opacity: 1}
+                                }
+                                @-webkit-keyframes ooLoadingIn{
+                                    0%{visibility: hidden; opacity: 0}
+                                    20%{visibility: visible; opacity: 0}
+                                    100%{visibility: visible; opacity: 1}
+                                }
+                                .ooef-loader>div, .ooef-loader>div:after{
+                                    border-radius: 50%;
+                                    width: 2.5rem;
+                                    height: 2.5rem
+                                }
+                                .ooef-loader>div{
+                                    font-size: 10px;
+                                    position: relative;
+                                    text-indent: -9999em;
+                                    border: .25rem solid #f5f5f5;
+                                    border-left: .25rem solid #55c4cf;
+                                    -webkit-transform: translateZ(0);
+                                    -ms-transform: translateZ(0);
+                                    transform: translateZ(0);
+                                    -webkit-animation: ooLoading 1.1s infinite linear;
+                                    animation: ooLoading 1.1s infinite linear
+                                }
+                                .ooef-loader.error>div{
+                                    border-left: .25rem solid #ff4500;
+                                    animation-duration: 5s
+                                }
+                                @-webkit-keyframes ooLoading{
+                                    0%{-webkit-transform: rotate(0); transform: rotate(0)}
+                                    100%{-webkit-transform: rotate(360deg); transform: rotate(360deg)}
+                                }
+                                @keyframes ooLoading{
+                                    0%{-webkit-transform: rotate(0); transform: rotate(0)}
+                                    100%{-webkit-transform: rotate(360deg); transform: rotate(360deg)}
+                                }
+                            </style>
+                            <div aria-live="polite" role="status">
+                                <div>Loading...</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed #ddd;">
+                    <p style="font-size: 14px; color: #666; text-align: center;">
+                        <i class="fas fa-shield-alt" style="color: #4CAF50; margin-right: 5px;"></i>
+                        Data Anda aman dan terlindungi. Kami tidak akan menyebarkan informasi pribadi Anda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section fade-in">
+        <div class="container">
+            <h2>Dapatkan Tas Selempang Premium Anda Sekarang!</h2>
+            <p>Jangan lewatkan penawaran spesial ini. Tas Tweelyforbag Nova dengan kualitas premium dan harga terbaik hanya untuk Anda hari ini.</p>
+            <!-- Tombol Pesan Sekarang dan teks garansi telah dihapus -->
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float" id="whatsappButton">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- OrderOnline Embed Script -->
+    <script>
+        if (typeof xLogError != 'function') {
+            var xLogError = function (error) {
+                var req = new XMLHttpRequest();
+                var payload = JSON.stringify({
+                    url: document.location.href,
+                    line: error.line,
+                    stack: error.stack
+                });
+                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                req.open('POST', 'https://api.orderonline.id/log', true);
+                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                req.send(params);
+            };
+        }
+        try {
+            if (typeof xEmbedScript != 'function') {
+                var xEmbedScript = function () {
+                    !function(w, d, e, v, id, t, s) {
+                        if (d.getElementById(id)) return;
+                        t = d.createElement(e);
+                        t.async = !0;
+                        t.src = v;
+                        t.id = id;
+                        s = d.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s);
+                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                };
+            }
+            if (typeof xEmbedInit != 'function') {
+                var xEmbedInit = function (w, n) {
+                    if (w.ooe) return;
+                    n = w.ooe = function() {
+                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    };
+                    if (!w._ooe) w._ooe = n;
+                    n.push = n;
+                    n.loaded = !0;
+                    n.version = '8.0.4';
+                    n.queue = [];
+                };
+            }
+            xEmbedInit(window);
+            ooe('setup', 'redirect', 'https://emma.orderonline.id');
+            ooe('init', '5f16831a9d8e8e4fb67472e5', '69307b37013ec90fa90367a3', null, 'oo-embed-form-jhg78hut6gdrg-3305', {
+                "mode": "page",
+                "action": "Klik untuk pemesanan",
+                "title": "Form Pemesanan",
+                "triggerPixel": true,
+                "triggerGtm": false
+            });
+            if (!window.jQuery) {
+                !function(w, d, e, v, id, t, s) {
+                    if (d.getElementById(id)) return;
+                    t = d.createElement(e);
+                    t.async = !0;
+                    t.src = v;
+                    t.id = id;
+                    t.addEventListener('load', xEmbedScript);
+                    s = d.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t, s);
+                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+            } else {
+                xEmbedScript();
+            }
+        } catch (e) {
+            xLogError(e);
+            throw e;
+        }
+    </script>
+    <!-- End OrderOnline Embed Code -->
+
+    <script>
+        // Initialize with fade-in animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Slideshow functionality
+            let slideIndex = 0;
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            
+            // Create dots dynamically based on number of slides
+            const dotsContainer = document.querySelector('.dots');
+            dotsContainer.innerHTML = ''; // Clear existing dots
+            
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.className = 'dot';
+                if (i === 0) dot.classList.add('active');
+                dot.setAttribute('data-slide', i);
+                dotsContainer.appendChild(dot);
+            }
+            
+            const dots = document.querySelectorAll('.dot');
+            
+            // Function to show specific slide
+            function showSlide(n) {
+                if (n >= totalSlides) slideIndex = 0;
+                if (n < 0) slideIndex = totalSlides - 1;
+                
+                slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === slideIndex);
+                });
+            }
+            
+            // Next/previous controls
+            document.querySelector('.next').addEventListener('click', () => {
+                slideIndex++;
+                showSlide(slideIndex);
+            });
+            
+            document.querySelector('.prev').addEventListener('click', () => {
+                slideIndex--;
+                showSlide(slideIndex);
+            });
+            
+            // Dot controls with event delegation
+            dotsContainer.addEventListener('click', function(e) {
+                if (e.target.classList.contains('dot')) {
+                    slideIndex = parseInt(e.target.getAttribute('data-slide'));
+                    showSlide(slideIndex);
+                }
+            });
+            
+            // Auto slide every 5 seconds
+            let slideInterval = setInterval(() => {
+                slideIndex++;
+                showSlide(slideIndex);
+            }, 5000);
+            
+            // Pause auto-slide on hover
+            const slideshowContainer = document.querySelector('.slideshow-container');
+            slideshowContainer.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            slideshowContainer.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(() => {
+                    slideIndex++;
+                    showSlide(slideIndex);
+                }, 5000);
+            });
+            
+            // Color selection functionality
+            const colorOptions = document.querySelectorAll('.color-option');
+            let selectedColor = 'black';
+            
+            colorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    colorOptions.forEach(opt => {
+                        opt.querySelector('.color-circle').classList.remove('selected');
+                    });
+                    
+                    // Add selected class to clicked option
+                    this.querySelector('.color-circle').classList.add('selected');
+                    selectedColor = this.getAttribute('data-color');
+                    
+                    // Show confirmation message
+                    showMessage(`Warna ${getColorName(selectedColor)} dipilih!`);
+                });
+            });
+            
+            // Helper function to get color name
+            function getColorName(colorCode) {
+                const colorNames = {
+                    'black': 'Hitam',
+                    'nude': 'Nude',
+                    'mocca': 'Mocca',
+                    'smoke': 'Smoke'
+                };
+                return colorNames[colorCode] || colorCode;
+            }
+            
+            // WhatsApp button functionality
+            const whatsappButton = document.getElementById('whatsappButton');
+            whatsappButton.addEventListener('click', function() {
+                const message = `Halo, saya tertarik dengan Tas Tweelyforbag Nova warna ${getColorName(selectedColor)}. Bisa info lebih lanjut?`;
+                const encodedMessage = encodeURIComponent(message);
+                window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
+            });
+            
+            // Show message function
+            function showMessage(text) {
+                // Create message element
+                const messageEl = document.createElement('div');
+                messageEl.textContent = text;
+                messageEl.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #ff5722;
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 8px;
+                    z-index: 10000;
+                    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+                    font-weight: 500;
+                    animation: fadeIn 0.3s ease-out;
+                    text-align: center;
+                    max-width: 90%;
+                `;
+                
+                document.body.appendChild(messageEl);
+                
+                // Remove message after 3 seconds
+                setTimeout(() => {
+                    messageEl.style.opacity = '0';
+                    messageEl.style.transition = 'opacity 0.5s';
+                    setTimeout(() => {
+                        document.body.removeChild(messageEl);
+                    }, 500);
+                }, 3000);
+            }
+            
+            // Add scroll animation for sections
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Mobile-friendly touch improvements
+            if ('ontouchstart' in window) {
+                // Add touch feedback for buttons
+                const buttons = document.querySelectorAll('button, .color-option, .dot');
+                buttons.forEach(button => {
+                    button.style.cursor = 'pointer';
+                    button.addEventListener('touchstart', function() {
+                        this.style.opacity = '0.8';
+                    });
+                    button.addEventListener('touchend', function() {
+                        this.style.opacity = '1';
+                    });
+                });
+                
+                // Add swipe functionality for slideshow on mobile
+                let touchStartX = 0;
+                let touchEndX = 0;
+                
+                slideshowContainer.addEventListener('touchstart', function(e) {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+                
+                slideshowContainer.addEventListener('touchend', function(e) {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                });
+                
+                function handleSwipe() {
+                    const swipeThreshold = 50;
+                    
+                    if (touchEndX < touchStartX - swipeThreshold) {
+                        // Swipe left - next slide
+                        slideIndex++;
+                        showSlide(slideIndex);
+                    }
+                    
+                    if (touchEndX > touchStartX + swipeThreshold) {
+                        // Swipe right - previous slide
+                        slideIndex--;
+                        showSlide(slideIndex);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
